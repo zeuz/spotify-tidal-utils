@@ -55,7 +55,13 @@ class TidalClient:
             if p.name == name:
                 return p
         return self.session.user.create_playlist(name, description=description)
-
+    
+    def get_playlist(self, name, description=None):         
+        for p in self.session.user.playlists():
+            if p.name == name:
+                return p
+        return None
+    
     def force_create_playlist(self, name, description):
         for p in self.session.user.playlists():
             if p.name == name:
