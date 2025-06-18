@@ -90,7 +90,7 @@ def main():
                     tidal.add_track_to_playlist_by_id(tidal_playlist, tidal_track.id)
                 else:
                     print(
-                        f"❌ No found on TIDAL: {tidal_track.artist.name} – {tidal_track.name}"
+                        f"❌ No found on TIDAL: {artist} – {title}"
                     )
                 # update previous song
                 local_previous_song = local_current_song
